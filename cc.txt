@@ -1,0 +1,7 @@
+color codes
+#243f12 Green, 
+#d6922a Yellow
+#3a3123 brown
+#e1e1e1 off white
+#1c1b12 blue black
+#a59d73 green gray

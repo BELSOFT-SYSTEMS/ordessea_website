@@ -11,7 +11,7 @@ height: 80px;
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 1.2rem;
+font-size: 18px;
 position: sticky;
 top: 0;
 z-index: 999;
@@ -23,9 +23,9 @@ z-index: 999;
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1320px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 10px;
 }
 
 #navbar__logo {
@@ -40,11 +40,13 @@ z-index: 999;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 28px;
+    padding-left: 12px;
+    padding-bottom: 14px;
 }
 
 .icon-ic {
-    margin-right: 0.5rem;
+    margin-right: 6px;
 }
 
 .navbar__menu {
@@ -64,16 +66,20 @@ z-index: 999;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 12px;
     height: 100%;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .navbar__btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 12px;
     width: 100%;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .button {
@@ -87,13 +93,17 @@ z-index: 999;
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #243f12;
+    background-color: #243f12;
+    position: relative;
+    transition: all 0.3s ease-in;
     color: #e1e1e1;
 }
 
 .button:hover {
-    background-color: #a59d73;
-    transition: all 0.3s ease;
+    background: #d6922a;
+    color: #e1e1e1;
+    transition: all 0.3s ease-in;
+    opacity: 1;
 }
 
 .navbar__links:hover {
@@ -116,13 +126,9 @@ z-index: 999;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /*grid-template-columns: auto;
-        width: 100%; 
-        height: 50vh;
-        */
-        margin: 0 0 0 150px;
+        margin: 0 0 0 230px;
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: 0;
         right: 0;
         visibility: hidden;
@@ -134,13 +140,9 @@ z-index: 999;
     }
 
     .navbar__menu.active {
-        /* background: #34f; */
-        /* top: 100%; */
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
-        /* height: 50vh; */
-        /* font-size: 1.2rem; */
         visibility: visible;
     }
 
@@ -161,7 +163,7 @@ z-index: 999;
     }
 
     .navbar__links {
-        padding: 0.1rem;
+        padding: 2px;
         width: 100%;
         text-align: center;
         /* display: table; */
@@ -176,8 +178,8 @@ z-index: 999;
     }
 
     .navbar__btn {
-        padding-bottom: 1.5rem;
-        padding-top: 0.5rem;
+        padding-bottom: 20px;
+        padding-top: 2px;
     }
 
     .button {
@@ -213,24 +215,37 @@ z-index: 999;
 }
 
 .main__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-self: center;
+    justify-content: flex-end;
     margin: 0 auto;
-    height: 90vh;
-    background-color: #a59d73;
+    height: 550px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, 
+    rgba(17,17,17,0.6) 100%), 
+    url('pictures/Tractor\ 1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1320px;
     padding: 0 30px;
+    border-radius: 20px;
+}
+
+.main__content {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .main__content h1 {
-    font-size: 4rem;
+    font-size: 55px;
+    font-weight: 700;
     margin-bottom: -10px;
+    align-items: center;
+    justify-self: center;
     background-color: #1c1b12;
-    background-image: linear-gradient(to top, #243f12 0%, #d6922a 100%);
+    background-image: linear-gradient(to top, #3a3123 0%, #243f12 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -239,8 +254,9 @@ z-index: 999;
 }
 
 .main__content h2 {
-    font-size: 1.5rem;
-    margin-bottom: -5px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: -20px;
     background-color: #1c1b12;
     background-image: linear-gradient(to top, #243f12 0%, #d6922a 100%);
     background-size: 100%;
@@ -251,19 +267,20 @@ z-index: 999;
 }
 
 .main__content p {
-    margin-top: 6px;
-    font-size: 12px;
+    margin-top: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: #1c1b12;
 }
 
 .main__btn {
     font-size: 15px;
+    font-weight: 600;
     background-color: #243f12;
     padding: 12px 16px;
     border-radius: 10px;
     border: none;
-    margin-top: 5px;
+    margin-top: 2px;
     cursor: pointer;
     position: relative;
     transition: all 0.5s;
@@ -286,7 +303,7 @@ z-index: 999;
     height: 100%;
     background: #d6922a;
     transition: all 0.5s;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .main__btn:hover {
@@ -297,20 +314,12 @@ z-index: 999;
     width: 100%;
 }
 
-.main__img--container {
-    text-align: center;
-}
-
-#main__img {
-    height: 80%;
-    width: 80%;
-}
-
 /* Mobile */
 @media screen and (max-width: 768px) {
     .main__container {
-        display: grid;
-        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: auto; */
         align-items: center;
         justify-self: center;
         width: 100%;
@@ -320,23 +329,30 @@ z-index: 999;
 
     .main__content {
         text-align: center;
-        margin-bottom: 10px;
-        margin-top: -40px;
+        margin-bottom: 90px;
+        margin-top: -10px;
     }
 
     .main__content h1 {
         font-size: 35px;
+        font-weight: 800;
         margin-top: 16px;
     }
 
     .main__content h2 {
         font-size: 18px;
+        font-weight: 700;
         margin-top: 12px;
     }
 
     .main__content p {
-        margin-top: 12px;
+        margin-top: 20px;
         font-size: 15px;
+    }
+
+    .main__btn {
+        padding: 12px 16px;
+        margin-top: 2px;
     }
 }
 
@@ -566,8 +582,16 @@ z-index: 999;
 
 /* Socials Media Icons*/
 .social__icon--link {
+    position: relative;
+    display: inline-block;
     color: #e1e1e1;
     font-size: 24px;
+    text-decoration: none;
+}
+
+.social__icon--link:hover {
+    color: #d6922a;
+    transition: 0.45s ease-out;
 }
 
 .social__media {
