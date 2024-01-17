@@ -232,8 +232,20 @@ z-index: 999;
     z-index: 1;
     width: 100%;
     max-width: 1392px;
-    padding: 0 30px;
-    border-radius: 20px;
+    padding: 0 32px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.main__container:after {
+    content: '';
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(to top, rgba(214, 146, 42, 0) 0%, #706758 100%);
+    z-index: -1;
 }
 
 .main__content {
@@ -288,6 +300,7 @@ z-index: 999;
     position: relative;
     transition: all 0.5s;
     outline: none;
+    z-index: 2;
 }
 
 .main__btn a {
@@ -307,6 +320,7 @@ z-index: 999;
     background: #d6922a;
     transition: all 0.5s;
     border-radius: 10px;
+    z-index: -1;
 }
 
 .main__btn:hover {
@@ -332,7 +346,7 @@ z-index: 999;
 
     .main__content {
         text-align: center;
-        margin-bottom: 48px;
+        margin-bottom: -20px;
         margin-top: -10px;
     }
 
@@ -393,7 +407,7 @@ z-index: 999;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 560;
+    height: 560px;
     max-height: 1408px;
 }
 
@@ -516,16 +530,21 @@ z-index: 999;
         height: 1408px;
     }
 
+    .services__card {
+        /* width: 100%; */
+        margin: 22px 0;
+    }
+
     .services h1 {
         font-size: 22px;
-        margin-top: 22px;
+        margin-top: 48px;
         margin-bottom: 8px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .services{
-        height: 1408px;
+        height: 2560px;
     }
 
     .services h1 {
@@ -533,7 +552,7 @@ z-index: 999;
     }
 
     .services__card {
-        width: 300px;
+        width: 200px;
     }
 }
 
@@ -659,6 +678,10 @@ z-index: 999;
 }
 
 @media screen and (max-width: 820px) {
+    .footer__container {
+        margin-top: 80px;
+    }
+
     .footer__links {
         padding-top: 30px;
     }
@@ -714,8 +737,20 @@ z-index: 999;
     z-index: 1;
     width: 100%;
     max-width: 1392px;
-    padding: 0 30px;
-    border-radius: 20px;
+    padding: 0 28px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.spage__container:after {
+    content: '';
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    width: 100%;
+    height: 28px;
+    background: linear-gradient(to top, rgba(214, 146, 42, 0) 0%, #8d8880 100%);
+    z-index: -1;
 }
 
 .spage__content {
@@ -798,8 +833,20 @@ z-index: 999;
     z-index: 1;
     width: 100%;
     max-width: 1392px;
-    padding: 0 30px;
-    border-radius: 20px;
+    padding: 0 28px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.apage__container:after {
+    content: '';
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    width: 100%;
+    height: 28px;
+    background: linear-gradient(to top, rgba(214, 146, 42, 0) 0%, #8d8880 100%);
+    z-index: -1;
 }
 
 .apage__content {
@@ -827,6 +874,7 @@ z-index: 999;
 }
 
 .about h1{
+    padding-top: 48px;
     margin-bottom: 8px;
     font-size: 32px;
     font-weight: 700;
@@ -845,13 +893,10 @@ z-index: 999;
 
 .about__container {
     display: grid;
-    /* flex-direction: row; */
     grid-template-columns: 256px 512px;
     align-items: center;
     justify-self: center;
     margin: 0 auto;
-    /* height: 2560px;
-    max-height: 3072px; */
     background-color: #e1e1e1;
     z-index: 1;
     width: 100%;
@@ -862,12 +907,12 @@ z-index: 999;
 }
 
 .about__content h2 {
-font-size: 28px;
-color: #3a3123;
-background-size: 100%;
-text-align: start;
-margin-right: 24px;
-margin-left: -128px;
+    font-size: 28px;
+    color: #3a3123;
+    background-size: 100%;
+    text-align: start;
+    margin-right: 24px;
+    margin-left: -128px;
 }
 
 .about__content h3 {
@@ -904,7 +949,7 @@ margin-left: -128px;
     flex-wrap: wrap;
 }
 
-.about__card {
+.about__card--1 {
     margin: 22px 12px;
     height: 425px;
     width: 360px;
@@ -917,17 +962,58 @@ margin-left: -128px;
     color: azure;
 }
 
-.about__card:nth-child(2) {
+.about__card--2 {
+    margin: 22px 12px;
+    height: 425px;
+    width: 360px;
+    border-radius: 6px;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, 
     rgba(17,17,17,0.6) 100%), 
-    url('pictures/Tractor\ 1.jpg');
+    url('pictures/Consult\ Scale.jpg');
+    background-size: cover;
+    position: relative;
+    color: azure;
 }
 
-.about__card:nth-child(3) {
+.about__card--3 {
+    margin: 22px 12px;
+    height: 425px;
+    width: 360px;
+    border-radius: 6px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, 
+    rgba(17,17,17,0.6) 100%), 
+    url('pictures/export1.jpg');
+    background-size: cover;
+    position: relative;
+    color: azure;
+}
+
+.about__card--4 {
+    margin: 22px 12px;
+    height: 425px;
+    width: 360px;
+    border-radius: 6px;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, 
     rgba(17,17,17,0.6) 100%), 
     url('pictures/Logistics1.jpg');
+    background-size: cover;
+    position: relative;
+    color: azure;
 }
+
+.about__card--5 {
+    margin: 22px 12px;
+    height: 425px;
+    width: 360px;
+    border-radius: 6px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, 
+    rgba(17,17,17,0.6) 100%), 
+    url('pictures/Crane\ 2.jpg');
+    background-size: cover;
+    position: relative;
+    color: azure;
+}
+
 
 /* apage Mobile */
 @media screen and (max-width: 768px) {
@@ -953,6 +1039,23 @@ margin-left: -128px;
         font-weight: 800;
         margin-top: 16px;
     }
+
+    .apage__content h2 {
+        font-size: 16px;
+        font-weight: 800;
+        margin-top: 12px;
+    }
+
+    .apage__content h3 {
+        font-size: 16px;
+        font-weight: 800;
+        margin-top: 12px;
+    }
+
+    .apage__content p {
+        margin-top: 20px;
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -965,5 +1068,15 @@ margin-left: -128px;
     .apage__content h1 {
         font-size: 35px;
         margin-top: 12px;
+    }
+
+    .apage__content h2 {
+        font-size: 18px;
+        margin-top: 4px;
+    }
+
+    .apage__content p {
+        margin-top: 20px;
+        font-size: 12px;
     }
 }
